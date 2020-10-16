@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "768712949872",
+    "firebase_url": "https://myrah-d05b3.firebaseio.com",
+    "project_id": "myrah-d05b3",
+    "storage_bucket": "myrah-d05b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768712949872:android:eb85b5a7aa7181d934b4b5",
+        "android_client_info": {
+          "package_name": "com.example.myrah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768712949872-328evnit4hdv217c6uuc6pv11vmem44h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0R_KqfvPUMdGpk4wAX0e0Gdx6dDwgPjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768712949872-328evnit4hdv217c6uuc6pv11vmem44h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
