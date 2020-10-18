@@ -1,9 +1,10 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class Product {
-  final String image, title, description, type;
-  final int price, id;
-  final Color color;
+  String image, title, description, type, id;
+  int price;
+  Color color;
   Product({
     this.id,
     this.image,
@@ -12,12 +13,34 @@ class Product {
     this.description,
     this.type,
     this.color,
-  });
+  }
+  );
+
+  Product.fromSnapshot(DataSnapshot snapshot) :
+      id = snapshot.key,
+      image = snapshot.value["image"],
+      title = snapshot.value["title"],
+      price = snapshot.value["price"],
+      description = snapshot.value["description"],
+      type = snapshot.value["type"],
+      color = snapshot.value["color"];
+  
+  toJson(){
+    return {
+     "image" : image,
+      "title" : title,
+      "price" : price,
+      "description" : description,
+      "type" : type,
+      "color" : color
+    };
+  }
+  
 }
 
 List<Product> products = [
   Product(
-      id: 1,
+      id: '1',
       title: "Palmyra Cake",
       price: 80,
       type: "Cup Cake",
@@ -25,7 +48,7 @@ List<Product> products = [
       image: "assets/images/cake.png",
       color: Colors.white),
   Product(
-      id: 2,
+      id: '2',
       title: "Palmyra Smoothie",
       price: 100,
       type: "Creamy Filled",
@@ -33,7 +56,7 @@ List<Product> products = [
       image: "assets/images/smoothie.PNG",
       color: Colors.white),
   Product(
-      id: 3,
+      id: '3',
       title: "Palmyra Pudding",
       price: 120,
       type: "Milk & Caramel",
@@ -41,7 +64,7 @@ List<Product> products = [
       image: "assets/images/pudding.png",
       color: Colors.white),
   Product(
-      id: 4,
+      id: '4',
       title: "Palmyra Ice Cream",
       price: 180,
       type: "Fruity Topped",
@@ -49,7 +72,7 @@ List<Product> products = [
       image: "assets/images/ice.png",
       color: Colors.white),
   Product(
-      id: 5,
+      id: '5',
       title: "Palmyra Jaggery",
       price: 50,
       type: "Wrapped",
@@ -57,7 +80,7 @@ List<Product> products = [
       image: "assets/images/jaggery.png",
       color: Colors.white),
   Product(
-    id: 6,
+    id: '6',
     title: "Palmyra Trickle",
     price: 200,
     type: "Leaf Wrapped Bottle",
