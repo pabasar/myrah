@@ -16,14 +16,11 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/back.svg"),
-        onPressed: () {},
-      ),
+      leading: IconButton(),
       actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset(
-            "assets/icons/search.svg",
+            "assets/icons/shopping-cart.svg",
             // By default our  icon color is white
             color: kTextColor,
           ),
@@ -31,7 +28,7 @@ class HomeScreen extends StatelessWidget {
         ),
         IconButton(
           icon: SvgPicture.asset(
-            "assets/icons/cart.svg",
+            "assets/icons/person_new.svg",
             // By default our  icon color is white
             color: kTextColor,
           ),
