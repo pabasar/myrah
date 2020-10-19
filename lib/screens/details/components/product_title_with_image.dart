@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myrah/models/Product.dart';
 
 import '../../../constants.dart';
+import '../../home/components/body.dart';
+import '../../home/components/body.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
   const ProductTitleWithImage({
@@ -47,11 +49,8 @@ class ProductTitleWithImage extends StatelessWidget {
               SizedBox(width: kDefaultPaddin),
               Expanded(
                 child: Hero(
-                  tag: "${product.id}",
-                  child: Image.asset(
-                    product.image,
-                    fit: BoxFit.fill,
-                  ),
+                    tag: "${product.id}",
+                    child: FirebaseStorageImageService.getImageFutureBuilder(context, product.image)
                 ),
               )
             ],

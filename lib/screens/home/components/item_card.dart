@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myrah/models/Product.dart';
 
 import '../../../constants.dart';
+import 'body.dart';
 
 class ItemCard extends StatelessWidget {
   final Product product;
@@ -33,7 +34,7 @@ class ItemCard extends StatelessWidget {
               ),
               child: Hero(
                 tag: "${product.id}",
-                child: Image.asset(product.image),
+                child: FirebaseStorageImageService.getImageFutureBuilder(context, product.image),
               ),
             ),
           ),
