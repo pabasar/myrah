@@ -40,4 +40,4 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-/.gradle/app/google-services.json
+*.json
